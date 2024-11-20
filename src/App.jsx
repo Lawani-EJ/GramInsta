@@ -1,11 +1,16 @@
-// import './App.css'
-import { Heading } from "@chakra-ui/react"
+import { Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage/Homepage';
+import AuthPage from './pages/AuthPage/AuthPage';
+
 function App() {
   return (
     <>
-    <Heading size="6xl"> Commented the Previous css and i&apos;ve added chakra UI with some assets and configured the alias at the vite configuration 🥲😁😗 </Heading>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/AuthPage" element={<AuthPage/>} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
